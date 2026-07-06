@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
+
     parameters {
         choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'safari', 'edge'], description: 'Browser to run the suite against')
         string(name: 'CUCUMBER_TAGS', defaultValue: '(@PlaceOrder or @SearchProduct) and not @KnownFailure', description: 'Cucumber tag expression to filter scenarios')
