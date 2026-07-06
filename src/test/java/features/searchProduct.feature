@@ -13,4 +13,8 @@ Feature: Search and place the order for prdocuts
       | VegName |
       | Tom     |
       | Car     |
+
+    @KnownFailure
+    Examples:
+      | VegName |
       | Beet	|

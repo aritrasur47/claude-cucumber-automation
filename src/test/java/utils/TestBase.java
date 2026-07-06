@@ -36,20 +36,20 @@ public class TestBase {
 
 			if (prop.getProperty("browser").equalsIgnoreCase(TestConstants.DEFAULT_BROWSER)) {
 				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--start-maximized");
 				driver = new ChromeDriver(options);
-				driver.manage().window().maximize();
 			} else if (prop.getProperty("browser").equalsIgnoreCase("firefox"))  {
 				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--start-maximized");
 				driver = new FirefoxDriver(options);
-				driver.manage().window().maximize();
 			} else if (prop.getProperty("browser").equalsIgnoreCase("safari"))  {
 				SafariOptions options = new SafariOptions();
 				driver = new SafariDriver(options);
 				driver.manage().window().maximize();
 			} else if (prop.getProperty("browser").equalsIgnoreCase("edge"))  {
 				EdgeOptions options = new EdgeOptions();
+				options.addArguments("--start-maximized");
 				driver = new EdgeDriver(options);
-				driver.manage().window().maximize();
 			}
 			driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(TestConstants.IMPLICIT_WAIT_TIMEOUT));
 			driver.get(URL);

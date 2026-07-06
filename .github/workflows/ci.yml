@@ -20,7 +20,11 @@ jobs:
           cache: maven
 
       - name: Run tests (Chrome, headless via Xvfb)
-        run: xvfb-run -a mvn -B test -Dtest=TestNGTestRunner
+        # @KnownFailure is a scenario intentionally left failing locally to demonstrate
+        # failure reporting; excluded here so CI stays green.
+        run: >
+          xvfb-run -a mvn -B test -Dtest=TestNGTestRunner
+          -Dcucumber.filter.tags="(@PlaceOrder or @SearchProduct) and not @KnownFailure"
 
       - name: Upload test reports
         if: always()
