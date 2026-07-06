@@ -14,6 +14,8 @@ Feature: Search and place the order for prdocuts
       | Tom     |
       | Car     |
 
+    # TODO: remove @KnownFailure once the offers-page "Beet" search mismatch is fixed,
+    # and drop the "and not @KnownFailure" filter in .github/workflows/ci.yml
     @KnownFailure
     Examples:
       | VegName |
