@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven'
+    environment {
+        PATH = "/opt/homebrew/bin:/opt/homebrew/opt/openjdk@21/bin:${env.PATH}"
     }
 
     stages {
