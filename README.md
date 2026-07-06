@@ -1,5 +1,7 @@
 # AI-Driven Cucumber Test
 
+[![CI](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml)
+
 BDD test automation framework using Cucumber, Selenium WebDriver, and TestNG.
 
 > 🤖 **Built with [Claude Code](https://claude.com/claude-code)** — this project's cross-browser WebDriver support, documentation, and repo setup were developed using Claude Code.
