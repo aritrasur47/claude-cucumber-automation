@@ -91,3 +91,7 @@ This will:
 - Show all screenshots with proper formatting and zoom capabilities
 
 **No more broken img tags in ExtentReports!** Allure handles attachments much more reliably.
+
+### Browser Setup
+
+For Safari and Edge WebDriver configuration steps, see [README.md](README.md#browser-configuration).
