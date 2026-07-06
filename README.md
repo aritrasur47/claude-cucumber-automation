@@ -1,6 +1,8 @@
 # AI-Driven Cucumber Test
 
 [![CI](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
 
 BDD test automation framework using Cucumber, Selenium WebDriver, and TestNG.
 
