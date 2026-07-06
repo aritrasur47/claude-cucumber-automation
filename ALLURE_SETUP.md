@@ -68,6 +68,7 @@ This will open the Allure report in your browser automatically with screenshots 
 3. **src/test/java/stepdefinitions/Hooks.java** - Enhanced with Allure attachments
 4. **src/test/resources/allure.properties** - Created for Allure config
 5. **fix-html-reports.py** - Updated to fix reports across all locations
+6. **src/test/java/utils/TestBase.java** - Supports Chrome, Firefox, Safari, and Edge (see [README.md](README.md#browser-configuration))
 
 ### Test Results:
 
