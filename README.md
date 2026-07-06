@@ -8,6 +8,8 @@ BDD test automation framework using Cucumber, Selenium WebDriver, and TestNG.
 
 > 🤖 **Built with [Claude Code](https://claude.com/claude-code)** — this project's cross-browser WebDriver support, documentation, and repo setup were developed using Claude Code.
 
+> 📚 This is a personal learning project built while following [Rahul Shetty Academy](https://rahulshettyacademy.com/) Selenium/Cucumber courses on Udemy. The practice application under test (`rahulshettyacademy.com/seleniumPractise`) is a public site provided by the same academy for learners.
+
 ## Prerequisites
 
 - Java 21
