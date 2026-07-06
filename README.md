@@ -13,8 +13,8 @@ BDD test automation framework using Cucumber, Selenium WebDriver, and TestNG.
 ## Setup
 
 ```bash
-git clone https://github.com/aritrasur47/ai-driven-cucumber-test.git
-cd ai-driven-cucumber-test
+git clone https://github.com/aritrasur47/claude-cucumber-automation.git
+cd claude-cucumber-automation
 mvn compile
 ```
 
