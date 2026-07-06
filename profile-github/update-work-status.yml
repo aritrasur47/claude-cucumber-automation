@@ -1,0 +1,59 @@
+name: Update Work Status
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: 'Project name to show as worked on'
+        required: false
+        default: 'cucumberproject'
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC (optional)
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Render status
+        env:
+          PROJECT: ${{ github.event.inputs.project }}
+        run: |
+          DATE=$(date -u +"%Y-%m-%d")
+          STATUS="**Today:** 🟩 Worked on ${PROJECT} (${DATE})"
+          echo "STATUS_LINE=${STATUS}" >> $GITHUB_ENV
+
+      - name: Update README placeholder
+        run: |
+          FILE=README.md
+          PLACEHOLDER="<!--WORK_STATUS-->"
+          if [ ! -f "$FILE" ]; then
+            echo "README.md not found, creating one"
+            echo -e "# Profile\n\n${STATUS_LINE}\n${PLACEHOLDER}" > "$FILE"
+          fi
+
+          if grep -q "$PLACEHOLDER" "$FILE"; then
+            awk -v s="$STATUS_LINE" -v p="$PLACEHOLDER" '{ if ($0 ~ p) { print s; print p } else print $0 }' "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
+          else
+            echo -e "\n${STATUS_LINE}\n${PLACEHOLDER}" >> "$FILE"
+          fi
+
+      - name: Commit changes
+        run: |
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update work status (${DATE})"
+            git push
+          fi

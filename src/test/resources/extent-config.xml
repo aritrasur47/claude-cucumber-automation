@@ -1,0 +1,11 @@
+<extentreports>
+	<configuration>
+		<!-- Valid theme values: standard, dark -->
+		<theme>dark</theme>
+		<documentTitle>Test Execution Report</documentTitle>
+		<reportName>Cucumber Automation Test Report</reportName>
+		<timeStampFormat>MMM dd, yyyy hh:mm:ss a</timeStampFormat>
+		<encoding>utf-8</encoding>
+		<timelineEnabled>true</timelineEnabled>
+	</configuration>
+</extentreports>
