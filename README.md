@@ -1,7 +1,6 @@
 # AI-Driven Cucumber Test
 
 [![Build Status](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/aritrasur47/claude-cucumber-automation/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://openjdk.org/projects/jdk/21/)
 [![Cucumber](https://img.shields.io/badge/Cucumber-7.23.0-23D96C.svg)](https://cucumber.io/)
